@@ -1,0 +1,54 @@
+﻿<Page x:Class="CallCenter.Pages.CompanesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CallCenter.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CompanesPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="167*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <TextBlock Text="Название" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,0,0,0" FontSize="14"/>
+            <TextBox HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,0,0,0" Width="150" x:Name="txtCust" TextChanged="txtCust_TextChanged">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+        </StackPanel>
+        <ListView  x:Name="listCompany" Grid.Row="1" Grid.ColumnSpan="2" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center" SelectionChanged="listCompany_SelectionChanged">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center"/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="20" Width="150">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="{Binding ID, StringFormat={}№:{0:N2}}" VerticalAlignment="Center" TextAlignment="Center" Width="290" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="5,5" FontSize="20" Grid.Row="0">
+                        </TextBlock>
+                        <TextBlock Text="{Binding Title}" Grid.Row="1" HorizontalAlignment="Center" FontSize="14"/>
+                        <TextBlock Text="{Binding MaxDebt, StringFormat={}Макс. долг:{0:N2} руб.}" Grid.Row="2" Margin="5,5,5,15" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Button x:Name="btnBack" Content="Назад" Width="80" Height="25" Margin="10,0,0,0" BorderBrush="{x:Null}" Click="btnBack_Click"/>
+            <Button x:Name="btnAdd" Content="Добавить" Width="80" Height="25" Margin="10,0,0,0" BorderBrush="{x:Null}"/>
+        </StackPanel>
+    </Grid>
+</Page>

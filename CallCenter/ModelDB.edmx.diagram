@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bb2e1911916d4e4abf55dc0baa049061" Name="Diagram1">
+        <EntityTypeShape EntityType="CallCenterModel.Addreses" Width="1.5" PointX="5.25" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CallCenterModel.Applications" Width="1.5" PointX="9.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CallCenterModel.Client" Width="1.5" PointX="7.5" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CallCenterModel.Contracts" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CallCenterModel.Employee" Width="1.5" PointX="7.5" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CallCenterModel.IntercoCompanies" Width="1.5" PointX="5.25" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CallCenterModel.Options" Width="1.5" PointX="0.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CallCenterModel.Services" Width="1.5" PointX="3" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CallCenterModel.SOSW" Width="1.5" PointX="12" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CallCenterModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="CallCenterModel.FK_Addreses_Contracts" ManuallyRouted="false" />
+        <AssociationConnector Association="CallCenterModel.FK_Client_Addreses" ManuallyRouted="false" />
+        <AssociationConnector Association="CallCenterModel.FK_Applications_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="CallCenterModel.FK_Applications_Services" ManuallyRouted="false" />
+        <AssociationConnector Association="CallCenterModel.FK_SOSW_Applications" ManuallyRouted="false" />
+        <AssociationConnector Association="CallCenterModel.FK_Client_IntercoCompanies" ManuallyRouted="false" />
+        <AssociationConnector Association="CallCenterModel.FK_Client_Services" ManuallyRouted="false" />
+        <AssociationConnector Association="CallCenterModel.FK_Contracts_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="CallCenterModel.FK_Contracts_Options" ManuallyRouted="false" />
+        <AssociationConnector Association="CallCenterModel.FK_Employee_IntercoCompanies" ManuallyRouted="false" />
+        <AssociationConnector Association="CallCenterModel.FK_Services_Options" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
